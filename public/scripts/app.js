@@ -68,7 +68,7 @@ function createTweetElement(tweet) {
       <p class="twitter-handle">${twitterHandle}</p>
     </header>
     <div class="tweet-body">
-      <p>${tweetBody}</p>
+      <p>${escape(tweetBody)}</p>
     </div>
     <footer>
       <p class="tweet-time-stamp">${Math.floor((d - timeStamp)/86400000)} days ago</p>
@@ -92,6 +92,13 @@ function renderTweets(tweets) {
       $('#tweet-log').append($tweet);
     }
   })
+}
+
+
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
 renderTweets(data);
