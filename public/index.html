@@ -6,15 +6,25 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
+
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+
+
   </head>
 
   <body>
@@ -25,9 +35,40 @@
       <span class="header">Tweeter</span>
     </nav>
 
+
+
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section id="tweet-log">
+        <article class="tweet">
+          <header>
+            <img class="profile-pic" src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_100.png">
+            <p class="twitter-name"><b>Royal Tenanbaum</b></p>
+            <p class="twitter-handle">@Royal</p>
+          </header>
+          <div class="tweet-body">
+            <p>I just want to hang out with my grand kids!</p>
+          </div>
+          <footer>
+            <p class="tweet-time-stamp">10 days ago</p>
+            <div class="icons">
+              <img class="flag-icon" src="/images/flag.png" width="25px" height="25px">
+              <img class="retweet-icon" src="/images/retweet.png" width="25px" height="25px">
+              <img class="heart-icon" src="/images/heart.png" width="25px" height="25px">
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
+
 
   </body>
 </html>
