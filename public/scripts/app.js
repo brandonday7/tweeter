@@ -59,9 +59,9 @@ function createTweetElement(tweet) {
 
 function renderTweets(tweets) {
   $(document).ready(function () {
-    for (let index = tweets.length-1; index >= 0; index--) {
+    for (index in tweets) {
       let $tweet = createTweetElement(tweets[index]);
-      $('#tweet-log').append($tweet);
+      $('#tweet-log').prepend($tweet);
     }
       let dynamicTweetBackround = `${$('#tweet-log').children().length*232}px`; //height of white background
       $('#tweet-log').css('height', dynamicTweetBackround);
@@ -78,11 +78,11 @@ function escape(str) {
 
 
 function loadTweets() {
-  $('#tweet-log').empty();
   $.ajax({
     url: '/tweets',
     method: 'GET',
     success: function (returnedData) {
+      $('#tweet-log').empty();
       renderTweets(returnedData);
     }
   });
