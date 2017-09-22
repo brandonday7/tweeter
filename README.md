@@ -14,4 +14,14 @@ This repository is the starter code for the project: Students will fork and clon
 ## Dependencies
 
 - Express
+- Body-Parser
+- Chance
+- Mongodb
 - Node 5.10.x or above
+
+
+## Screenshots
+
+!["Users can compose their own tweets"](https://github.com/brandonday7/tweeter/blob/master/docs/tweet-composition.png?raw=true)
+
+!["The posted tweets will immediately be posted to the feed"](https://github.com/brandonday7/tweeter/blob/master/docs/tweet-feed.png?raw=true)
